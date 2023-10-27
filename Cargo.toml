@@ -1,0 +1,28 @@
+[package]
+name = "smail"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "smail-server"
+path = "src/bin/server.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+thiserror = "1"
+anyhow = "1.0.70"
+chrono = "0.4"
+mapuche-embedded = "0.1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.57"
+uuid = { version = "1.2.2", features = ["v4", "fast-rng", "macro-diagnostics"] }
+lazy_static = "1.4.0"
+async_once = "0.2.6"
+clap = { version = "3.1.18", features = ["derive"] }
+actix-web = "4"
+actix-files = "0.6.2"
+slog = { version = "2.3", features = ["max_level_trace", "release_max_level_debug"] }
+slog-term = { version = "2.4" }
+toml = { version = "0.7.2" }

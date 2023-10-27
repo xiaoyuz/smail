@@ -1,0 +1,5 @@
+/target
+/Cargo.lock
+.idea
+**/smail-server.log
+**/smail_server_store
